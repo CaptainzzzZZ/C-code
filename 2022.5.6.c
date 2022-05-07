@@ -1,4 +1,4 @@
-#include<stdio.h>
+//#include<stdio.h>
 
 //int main()
 //{
@@ -37,3 +37,13 @@
 //    printf("%c%c%c%c%c\n",c,c,c,c,c);
 //    return 0;
 //}
+
+
+#include<stdio.h>
+int main()
+{
+    double a = 0, b = 0;
+    scanf_s("%lf %lf", &a, &b);
+    printf("%.9lf", a / b);
+    return 0;
+}
