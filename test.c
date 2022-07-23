@@ -2,93 +2,104 @@
 
 #include<stdio.h>
 
+
 //int main()
 //{
-//	int arr[10] = { 0 };
+//	
+//	int n = 0;
 //	int i = 0;
-//	for (i = 0; i < 10; i++)
+//	int x = 0;
+//	int sum = 0;
+//	scanf("%d", &n);
+//	for(i=0;i<n;i++)
 //	{
-//		arr[i] = i;
+//		scanf("%d", &x);
+//		sum = sum + x;                      
 //	}
-//	for (i = 0; i < 10; i++)
-//	{
-//		printf("%d ", arr[i]);
-//	}
-//	return 0;
-//}
-//void test2()
-//{
-//	printf("...");
-//}
-//
-//void test1()
-//{
-//	test2();
-//}
-//
-//void test()
-//{
-//	test1();
-//}
-//
-//int main()//调用堆栈 就是看函数的调用逻辑
-//{
-//	test();
+//	printf("%d %.5lf", sum,sum*1.0/n);
 //	return 0;
 //}
 
 
 //int main()
 //{
-//	int arr[10] = { 0,1,2,3,4,5,6,7,8,9 };
+//	int k = 0,x=0;
+//	int count1 = 0, count2 = 0, count3 = 0;
+//	scanf("%d", &k);
 //	int i = 0;
-//
-//	for (i = 0; i <=13; i++)
+//	for (i = 0; i < k; i++)
 //	{
-//		arr[i] = 0;
-//		printf("111");
+//		scanf("%d", &x);
+//		if (1==x)
+//		{
+//			count1++;
+//		}
+//		else if (5==x)
+//		{
+//			count2++;
+//		}
+//		else if (10 == x)
+//		{
+//			count3++;
+//		}
 //	}
+//	printf("%d\n", count1);
+//	printf("%d\n", count2);
+//
+//	printf("%d\n", count3);
+//
 //	return 0;
-//
 //}
 
-#include<string.h>
 
-//void my_strlen(char* dest, char* scr)
+//int main()
 //{
-//	while (*scr != '\0')
+//	int	n = 0;
+//	int arr[30] = { 1,1 };
+//	scanf_s("%d", &n);
+//	int a = 0;
+//	while (n--)
 //	{
-//		*dest = *scr;
-//		*dest++;
-//		*scr++;
-//	}
-//	*dest = *scr;
-//}
-
-//void my_strlen(char* dest, char* scr)
-//{
-//	while (*scr != '\0')
-//	{
-//		*dest++ = *scr++;
+//		scanf_s("%d", &a);
+//		for (int i = 2; i <= a; i++)
+//		{
+//			arr[i] = arr[i - 1] + arr[i - 2];
+//		}
+//		printf("%d\n", arr[a-1]);
 //
 //	}
-//	*dest = *scr;
+//	
+//	return 0;
 //}
 
-void my_strlen(char* dest, char* scr)
-{
-	while (*dest++=*scr++)
+
+//int main()
+//{
+//	int arr[30] = { 1,1 };
+//	int n = 0;
+//	scanf("%d", &n);
+//	for (int i = 2; i <= n; i++)
+//	{
+//		arr[i] = arr[i - 1] + arr[i - 2];
+//	}
+//	printf("%d", arr[n]);
+//	return 0;
+//}
+
+
+	int main()
 	{
-		;
+		long long a, b, c;
+		int x=0;
+		scanf("%lld %lld %lld", &a, &b, &c);
+		for(x=2;x<=a&&x<=b&&x<=c;x++)
+		{
+			if (a % x == b % x && b % x == c % x)
+			{
+                printf("%d", x);
+			    break;
+			}
+			
+		}
+		return 0;
 	}
-}
-
-int main()
-{
-	char arr1[] = "xxxxxxxxxxxxxxxxxxxxxx";
-	char arr2[] = "hello world";
-	//strcpy(arr1, arr2); 
-	my_strlen(arr1, arr2);
-	printf("%s\n", arr1);
-	return 0;
-}
